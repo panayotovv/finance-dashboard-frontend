@@ -1,0 +1,64 @@
+.welcome-banner {
+  position: relative;
+  background: linear-gradient(135deg, #0d1b3e 0%, #0a1628 60%, #0d1240 100%);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 20px;
+  padding: 32px 28px;
+  overflow: hidden;
+  min-height: unset;
+  height: 100%;
+  display: flex;
+  box-sizing: border-box;
+  align-items: flex-end;
+}
+
+.welcome-banner__text {
+  position: relative;
+  z-index: 2;
+}
+
+.welcome-banner__greeting {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.55);
+  margin: 0 0 4px 0;
+}
+
+.welcome-banner__name {
+  font-size: 26px;
+  font-weight: 800;
+  color: #fff;
+  margin: 0 0 10px 0;
+  letter-spacing: -0.03em;
+}
+
+.welcome-banner__subtitle {
+  font-size: 12.5px;
+  color: rgba(255, 255, 255, 0.45);
+  margin: 0 0 20px 0;
+  line-height: 1.6;
+}
+
+.welcome-banner__cta {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 12px;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.2s;
+}
+
+.welcome-banner__cta:hover {
+  color: #fff;
+}
+
+.welcome-banner__rings {
+  position: absolute;
+  right: -1px;
+  top: 40%;
+  transform: translateY(-50%);
+  width: 280px;
+  height: 280px;
+  pointer-events: none;
+  overflow: visible;
+}

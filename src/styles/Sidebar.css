@@ -1,0 +1,101 @@
+.nav-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 220px;
+    color: white;
+    padding: 1.5rem 0;
+    box-sizing: border-box;
+    position: fixed;
+    z-index: 100;
+    background: rgba(11, 15, 44, 0.6);
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 0 0.75rem 0.75rem 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.nav-logo::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    width: 80%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(255,255,255,0.6), transparent);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+nav ul li {
+    display: flex;  
+    width: 100%;
+    margin-bottom: 0.25rem;
+    padding: 0 0.5rem;        
+    box-sizing: border-box;  
+}
+
+nav ul li a,
+nav ul li button {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+
+    width: 100%;             
+    padding: 0.65rem 1rem;
+    border-radius: 10px;
+
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.85rem;
+    text-decoration: none;
+
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+
+    transition: background 0.2s, color 0.2s;
+}
+
+nav ul li a:hover,
+nav ul li button:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: white;
+}
+
+nav ul li.active a {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.icon {
+    padding: 0.3rem;
+    color: #0472fa;
+    transition: all 0.2s ease-in-out;
+}
+
+.icon-container {
+    background-color: #1a1f37;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease-in-out;
+}
+
+nav ul li a:hover .icon-container,
+nav ul li button:hover .icon-container {
+    background-color: #0472fa;
+}
+
+nav ul li a:hover .icon,
+nav ul li button:hover .icon {
+    color: white;
+}

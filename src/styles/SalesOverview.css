@@ -1,0 +1,84 @@
+.sales {
+  background: #0f1a30;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 20px;
+  padding: 24px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.sales__header {
+  margin-bottom: 16px;
+}
+
+.sales__title {
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.88);
+  margin: 0 0 3px 0;
+}
+
+.sales__sub {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.35);
+  margin: 0;
+}
+
+.sales__sub--green {
+  color: #4ade80;
+  font-weight: 600;
+}
+
+.sales__tooltip {
+  background: #0f1a30;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.sales__tooltip-label {
+  font-weight: 600;
+  margin: 0 0 6px 0;
+  color: white;
+}
+
+.sales__tooltip p {
+  margin: 2px 0;
+}
+
+
+.timestamp-button {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.7);
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  top: 20px;
+  right: 20px;
+}
+
+.timestamp-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.timestamp-button.active {
+  background: #22c55e;
+  color: #fff;
+  border-color: #22c55e;
+}
+
+.timestamp-button {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.timestamp-button:active {
+  transform: scale(0.95);
+}

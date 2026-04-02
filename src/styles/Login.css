@@ -1,0 +1,211 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Overlay — exactly matches TransactionModal */
+.login-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  
+}
+
+/* Card — same sizing as .modal-content */
+.login-card {
+  background: linear-gradient(160deg, #1a2a6e, #162060, #0f1a50);
+  padding: 1.75rem;
+  border-radius: 20px;
+  min-width: 320px;
+  max-width: 400px;
+  width: 100%;
+  color: #fff;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  text-align: left;
+}
+
+/* Header — same as .modal-header */
+.login-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.login-eyebrow {
+  margin: 0;
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.45);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.login-title {
+  margin: 4px 0 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+}
+
+/* Close button — exactly matches .modal-close */
+.login-close {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background 0.15s, color 0.15s;
+}
+
+.login-close:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+/* Fields — matches .field-group / .field-label / .field-input */
+.login-field-group {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.login-field-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 7px;
+  letter-spacing: 0.02em;
+}
+
+.login-field-input {
+  width: 100%;
+  padding: 11px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.07);
+  color: #fff;
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.login-field-input::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.login-field-input:focus {
+  border-color: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Error — matches .error-msg */
+.login-error {
+  font-size: 12px;
+  color: #fca5a5;
+  background: rgba(248, 113, 113, 0.12);
+  border: 1px solid rgba(248, 113, 113, 0.25);
+  border-radius: 10px;
+  padding: 8px 12px;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+/* Actions — matches .modal-actions */
+.login-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 0.25rem;
+}
+
+/* Cancel — matches .btn-cancel */
+.login-btn-cancel {
+  flex: 1;
+  padding: 11px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: transparent;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.login-btn-cancel:hover {
+  background: rgba(255, 255, 255, 0.07);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Submit — matches .btn-submit */
+.login-btn-submit {
+  flex: 2;
+  padding: 11px;
+  border-radius: 12px;
+  border: none;
+  background: rgba(255, 255, 255, 0.95);
+  color: #162060;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s;
+}
+
+.login-btn-submit:hover {
+  background: #fff;
+}
+
+.login-btn-submit:active {
+  transform: scale(0.98);
+}
+
+.login-btn-submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Footer */
+.login-footer {
+  margin-top: 1rem;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.35);
+  text-align: center;
+}
+
+.login-footer a {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.login-footer a:hover {
+  color: #fff;
+}
+
+/* Replace this at the bottom of Login.css */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px #1e2a6e inset !important;
+  -webkit-text-fill-color: #ffffff !important;
+  caret-color: #fff;
+  transition: background-color 5000s ease-in-out 0s;
+}
