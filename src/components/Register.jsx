@@ -29,10 +29,13 @@ function Register({ onSuccess, onClose, onSwitchToLogin  }) {
       });
         const data = await response.json();
         
-        localStorage.setItem('accessToken', data.tokens.access);
-        localStorage.setItem('refreshToken', data.tokens.refresh);
-      if (!response.ok)
-        throw new Error();
+      if (!response.ok) {
+        setError(data?.detail || 'Registration failed. Try different credentials.');
+        return;
+      }
+
+      localStorage.setItem('accessToken', data.tokens.access);
+      localStorage.setItem('refreshToken', data.tokens.refresh);
 
       if (onSuccess) onSuccess();
     } catch (err) {

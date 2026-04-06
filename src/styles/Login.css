@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 
-/* Overlay — exactly matches TransactionModal */
+
 .login-overlay {
   position: fixed;
   top: 0;
@@ -18,7 +18,7 @@
   
 }
 
-/* Card — same sizing as .modal-content */
+
 .login-card {
   background: linear-gradient(160deg, #1a2a6e, #162060, #0f1a50);
   padding: 1.75rem;
@@ -32,7 +32,7 @@
   text-align: left;
 }
 
-/* Header — same as .modal-header */
+
 .login-header {
   display: flex;
   align-items: flex-start;
@@ -56,7 +56,7 @@
   color: #fff;
 }
 
-/* Close button — exactly matches .modal-close */
+
 .login-close {
   width: 34px;
   height: 34px;
@@ -78,7 +78,7 @@
   color: #fff;
 }
 
-/* Fields — matches .field-group / .field-label / .field-input */
+
 .login-field-group {
   margin-bottom: 1rem;
   text-align: left;
@@ -115,7 +115,7 @@
   background: rgba(255, 255, 255, 0.1);
 }
 
-/* Error — matches .error-msg */
+
 .login-error {
   font-size: 12px;
   color: #fca5a5;
@@ -127,14 +127,14 @@
   text-align: left;
 }
 
-/* Actions — matches .modal-actions */
+
 .login-actions {
   display: flex;
   gap: 8px;
   margin-top: 0.25rem;
 }
 
-/* Cancel — matches .btn-cancel */
+
 .login-btn-cancel {
   flex: 1;
   padding: 11px;
@@ -154,7 +154,7 @@
   color: rgba(255, 255, 255, 0.8);
 }
 
-/* Submit — matches .btn-submit */
+
 .login-btn-submit {
   flex: 2;
   padding: 11px;
@@ -182,7 +182,7 @@
   cursor: not-allowed;
 }
 
-/* Footer */
+
 .login-footer {
   margin-top: 1rem;
   font-size: 12px;
@@ -200,7 +200,7 @@
   color: #fff;
 }
 
-/* Replace this at the bottom of Login.css */
+
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus {

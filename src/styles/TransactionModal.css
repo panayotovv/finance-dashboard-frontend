@@ -17,7 +17,7 @@
   z-index: 999; 
 }
 
-/* Card */
+
 .modal-content {
   background: linear-gradient(160deg, #1a2a6e, #162060, #0f1a50);
   padding: 1.75rem;
@@ -31,7 +31,7 @@
   text-align: left;
 }
 
-/* Header */
+
 .modal-header {
   display: flex;
   align-items: flex-start;
@@ -78,7 +78,7 @@
   color: #fff;
 }
 
-/* Type Toggle */
+
 .type-toggle {
   display: flex;
   gap: 8px;
@@ -120,7 +120,7 @@
   color: #fca5a5;
 }
 
-/* Fields */
+
 .field-group {
   margin-bottom: 1rem;
   text-align: left;
@@ -164,7 +164,7 @@
   cursor: not-allowed;
 }
 
-/* Amount prefix */
+
 .amount-wrapper {
   position: relative;
 }
@@ -183,7 +183,7 @@
   padding-left: 28px;
 }
 
-/* Investment row */
+
 .investment-row {
   display: flex;
   align-items: center;
@@ -223,7 +223,7 @@
   color: rgba(255, 255, 255, 0.35);
 }
 
-/* Error */
+
 .error-msg {
   font-size: 12px;
   color: #fca5a5;
@@ -235,7 +235,7 @@
   text-align: left;
 }
 
-/* Actions */
+
 .modal-actions {
   display: flex;
   gap: 8px;
@@ -288,7 +288,7 @@
   cursor: not-allowed;
 }
 
-/* Transactions modal variant */
+
 .modal-content-transactions {
   background: linear-gradient(160deg, #1a2a6e, #162060, #0f1a50);
   padding: 1.75rem;
@@ -318,7 +318,7 @@
 
 
 
-/* Modal container stays mostly fine */
+
 .modal-content-transactions {
   width: 90%;
   max-width: 500px;
@@ -328,29 +328,29 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  color: #e5e7eb; /* light text */
+  color: #e5e7eb; 
 }
 
-/* Header */
+
 .sign-in-header {
   text-align: center;
   margin-bottom: 10px;
   color: #f9fafb;
 }
 
-/* List */
+
 .transaction-list {
   overflow-y: auto;
   display: flex;
   flex-direction: column;
-  gap: 6px; /* tighter spacing */
+  gap: 6px; 
 }
 
-/* Transaction item (LESS padding) */
+
 .transaction-item {
-  background: #0e1a31; /* dark blue-gray */
+  background: #0e1a31; 
   border-radius: 8px;
-  padding: 12px 15px; /* reduced from 12–15 */
+  padding: 12px 15px; 
   transition: background 0.2s ease;
 }
 
@@ -358,46 +358,46 @@
   background: #172145;
 }
 
-/* Layout */
+
 .transaction-info {
   display: flex;
   flex-direction: column;
-  gap: 2px; /* tighter */
+  gap: 2px; 
 }
 
-/* Row */
+
 .transaction-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-/* Category */
+
 .transaction-desc {
   font-weight: 500;
   font-size: 13px;
   color: #e2e8f0;
 }
 
-/* Date */
+
 .transaction-date {
   font-size: 11px;
   color: #94a3b8;
 }
 
-/* Amount */
+
 .transaction-amount {
   margin: 0;
   font-size: 14px;
   font-weight: 600;
 }
 
-/* Expense */
+
 .transaction-change--down {
-  color: #f87171; /* softer red */
+  color: #f87171; 
 }
 
-/* Income */
+
 .transaction-change--up {
-  color: #34d399; /* soft green */
+  color: #34d399; 
 }

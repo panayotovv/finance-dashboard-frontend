@@ -134,7 +134,7 @@ export default function FinanceOverview({ isLoggedIn, transactionsData }) {
 
           <Tooltip content={<CustomTooltip />} />
 
-          {/* Expenses */}
+          {}
           <Area
             type="monotone"
             dataKey="expenses"
@@ -144,7 +144,7 @@ export default function FinanceOverview({ isLoggedIn, transactionsData }) {
             fill="url(#expensesGrad)"
           />
 
-          {/* Income */}
+          {}
           <Area
             type="monotone"
             dataKey="income"
@@ -154,7 +154,7 @@ export default function FinanceOverview({ isLoggedIn, transactionsData }) {
             fill="url(#incomeGrad)"
           />
 
-          {/* Investments */}
+          {}
           <Area
             type="monotone"
             dataKey="investments"

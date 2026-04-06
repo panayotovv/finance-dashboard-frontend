@@ -73,7 +73,6 @@ export default function Layout() {
     setUserData(null);
     setTransactionSummary({});
     setTransactionsData([]);
-    setIsLoggedIn(false);
   };
 
   const handleSignInSuccess = () => {
@@ -145,7 +144,6 @@ export default function Layout() {
             setShowTransaction,
             setAllTransactions,
             showAllTransactions,
-            isLoggedIn
           }}
         />
       </div>

@@ -37,7 +37,9 @@ export default function Profile() {
   const [editing, setEditing] = useState(false);
   const [formData, setFormData] = useState({});
   const { isLoggedIn } = useOutletContext();
+  const [activityData, setActivityData] = useState([]);
 
+  const sortedActivity = [...activityData].sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
   const toggle = (key) => setPrefs((p) => ({ ...p, [key]: !p[key] }));
   const setCurrency = (currency) => setPrefs((p) => ({ ...p, currency }));
 
@@ -45,7 +47,11 @@ export default function Profile() {
     try {
       const response = await fetch("http://127.0.0.1:8000/api/users/user/",{
         headers: { Authorization: `Bearer ${localStorage.getItem("accessToken")}` },
-      })  
+      })
+      
+      const recent_activity = await fetch("http://127.0.0.1:8000/api/recent_activity/",{
+        headers: { Authorization: `Bearer ${localStorage.getItem("accessToken")}` },
+      })
 
       if (response.status === 401) {
         console.warn("Unauthorized. Please log in again.");
@@ -53,7 +59,9 @@ export default function Profile() {
       }
 
       const user_data = await response.json();
+      const activity_data = await recent_activity.json();
 
+      setActivityData(activity_data);
       setFormData(user_data);
     }
       catch (error) { console.error("Error fetching user data:", error); }
@@ -72,10 +80,10 @@ export default function Profile() {
   return (
     <div className="prof">
 
-      {/* ── Page Body ── */}
+      {}
       <main className="prof__body">
 
-        {/* ── Hero ── */}
+        {}
         <div className="prof__hero">
           <div className="prof__hero-left">
             <div className="prof__avatar-wrap">
@@ -112,7 +120,7 @@ export default function Profile() {
 
         <div className="prof__divider" />
 
-        {/* ── Stats Row ── */}
+        {}
         <div className="prof__stats" role="list" aria-label="Key statistics">
           <div className="prof__stat" role="listitem">
             <span className="prof__stat-icon">💳</span>
@@ -127,7 +135,6 @@ export default function Profile() {
               ${mockUser.stats.savedThisMonth.toLocaleString()}
             </span>
             <span className="prof__stat-label">Saved this month</span>
-            <span className="prof__stat-delta">+12%</span>
           </div>
           <div className="prof__stat" role="listitem">
             <span className="prof__stat-icon">🔥</span>
@@ -139,17 +146,16 @@ export default function Profile() {
           <div className="prof__stat" role="listitem">
             <span className="prof__stat-icon">📈</span>
             <span className="prof__stat-val">
-              ${(mockUser.stats.netWorth / 1000).toFixed(1)}k
+              ${(formData.net_worth / 1000).toFixed(1)}k
             </span>
             <span className="prof__stat-label">Net worth tracked</span>
-            <span className="prof__stat-delta">+3.2%</span>
           </div>
         </div>
 
-        {/* ── Bento Grid ── */}
+        {}
         <div className="prof__grid">
 
-          {/* Account Details */}
+          {}
           <section className="prof__card prof__card--account" aria-labelledby="acct-heading">
             <div className="prof__card-head">
               <h2 id="acct-heading" className="prof__card-title">Account details</h2>
@@ -183,7 +189,7 @@ export default function Profile() {
                 </label>
                 <div className="prof__field">
                   <span className="prof__field-label">Member since</span>
-                  <div className="prof__field-static">{mockUser.joined}</div>
+                  <div className="prof__field-static">{formData.date_joined}</div>
                 </div>
               </div>
             ) : (
@@ -204,19 +210,18 @@ export default function Profile() {
                 </div>
                 <div className="prof__field">
                   <span className="prof__field-label">Member since</span>
-                  <div className="prof__field-static">{mockUser.joined}</div>
+                  <div className="prof__field-static">{formData.date_joined}</div>
                 </div>
               </div>
             )}
           </section>
 
-          {/* Recent Activity */}
           <section className="prof__card prof__card--activity" aria-labelledby="activity-heading">
             <div className="prof__card-head">
               <h2 id="activity-heading" className="prof__card-title">Recent activity</h2>
             </div>
             <ol className="prof__timeline">
-              {mockUser.recentActivity.map((a) => (
+              {sortedActivity.map((a) => (
                 <li key={a.id} className="prof__timeline-item">
                   <div className={`prof__timeline-icon prof__timeline-icon--${a.type}`}>
                     {a.icon}
@@ -230,7 +235,7 @@ export default function Profile() {
             </ol>
           </section>
 
-          {/* Preferences — spans full height */}
+          {}
           <section className="prof__card prof__card--prefs" aria-labelledby="prefs-heading">
             <div className="prof__card-head">
               <h2 id="prefs-heading" className="prof__card-title">Preferences</h2>
