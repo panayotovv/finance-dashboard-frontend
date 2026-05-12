@@ -32,5 +32,11 @@ Monitor monthly activity to improve budgeting.
 ![App Screenshot](src/screenshots/add_transaction.png)
 ![App Screenshot](src/screenshots/all_transactions.png)
 
+## 🔗 Repositories
+- Backend — https://github.com/panayotovv/finance-dashboard-frontend
+- Frontend — https://github.com/panayotovv/finance-dashboard-backend
+
+
+
 📄 License
 This project is licensed under the MIT License.
